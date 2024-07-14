@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>Cek Khodam</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm text-white bg-dark">
+            <div class="container-fluid">
+                <h4 class="nav-brand">Website Cek Khodam</h4>
+                <h6 class="nav-brand">By Prima Yudhistira</h6>
+            </div>
+        </nav>
+        <center>
+        <div class="container my-5">
+            <div class="card w-50 mt-5">
+                <div class="card-header bg-dark text-white">
+                    <h2 class="card-title">Cek Khodam Anda</h2>
+                </div>
+
+                <div class="card-body">
+                    <table cellpading="0" cellspacing="10">
+                    <form name="dataDiri" method="post" onsubmit="return result()">
+                        <tr>
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama anda" required>
+                        </tr>
+                        <tr>
+                            <input type="text" class="form-control mt-4" id="tgl" placeholder="Tanggal Lahir"
+                            onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn-lg btn-primary mt-3">Cek</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    &copy Muhammad Prima Yudhistira 2024
+                    <p>For entertainment purpose.</p>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        function result(){
+                const name = document.getElementById("nama");
+                const date = document.getElementById("tgl");
+                if(name.value === '' || date.value ==='' ){
+                    alert("Harap isi nama dan tanggal lahir");
+                }
+                else{
+                    const arr = ["Siluman Harimau", 
+                    "Lontong Sayur", 
+                    "Charger Vivo", 
+                    "Ratu Pantai Selatan", 
+                    "Keris Jawa", 
+                    "Stang Mio", 
+                    "Knalpot Racing",
+                    "Power Rangers Merah",
+                    "Siluman Naga",
+                    "Siluman Ikan Sepat",
+                    "Jin Lampu Aladin",
+                    "Sapu Terbang",
+                    "Samsung J2 Prime",
+                    "Siluman Buaya Putih",
+                    "Buaya Bantet",
+                    "Standar Vario"];
+                    
+                    const rand = Math.floor(Math.random() * arr.length);
+                    alert("Khodam kamu adalah " + (rand, arr[rand]));
+                }
+            }
+    </script>
+
+    </body>
+</html>
