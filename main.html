@@ -21,7 +21,6 @@
 
                 <div class="card-body">
                     <table cellpading="0" cellspacing="10">
-                    <form name="dataDiri" method="post" onsubmit="return result()">
                         <tr>
                             <input type="text" class="form-control" id="nama" placeholder="Masukkan nama anda" required>
                         </tr>
@@ -30,8 +29,7 @@
                             onfocus="(this.type='date')" onblur="(this.type='text')" required>
                         </tr>
                     </table>
-                    <button type="submit" class="btn-lg btn-primary mt-3">Cek</button>
-                    </form>
+                    <button type="submit" class="btn-lg btn-primary mt-3" onclick="return result()">Cek</button>
                 </div>
                 <div class="card-footer">
                     &copy Muhammad Prima Yudhistira 2024
